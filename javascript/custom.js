@@ -2,7 +2,6 @@
     "use strict";
 
     jQuery(document).ready(function () {
-
         /***MENU TOGGLE ANIMATION***/
         $('.toggle-normal').on('click', function() {
                 $('.top-bar').toggleClass('top-transform');
@@ -156,7 +155,7 @@
         function init() {
             var mapOptions = {
                 zoom: 17,
-                center: new google.maps.LatLng(51.5287352, -0.3817831),
+                center: new google.maps.LatLng(-12.0884149, -77.0033239),
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
                 scrollwheel: false,
                 disableDefaultUI: false
@@ -200,7 +199,7 @@
             e.preventDefault(); //Prevents default submit
             var form = $(this);
             $("#submit").attr('disabled', 'disabled'); //Disable the submit button on click
-            var post_data = form.serialize(); //Serialized the form data 
+            var post_data = form.serialize(); //Serialized the form data
             $('div#form-loader').removeClass('is-hidden').fadeIn(500);
             $.ajax({
                 type: 'POST',
@@ -244,5 +243,3 @@
 
 
 })(jQuery);
-
-
